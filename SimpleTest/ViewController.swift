@@ -28,6 +28,8 @@ class ViewController: UIViewController, WebSocketDelegate {
         socket.connect()
     }
     
+    @IBOutlet weak var userMessage: UITextField!
+    
     // MARK: Websocket Delegate Methods.
     
     func websocketDidConnect(socket: WebSocketClient) {
@@ -59,7 +61,8 @@ class ViewController: UIViewController, WebSocketDelegate {
         UIBarButtonItem) {
         print("send message")
         do {
-            let um = Message(message: "hello yupeng from ios", username: "yupeng", user_id: 1, message_type: "User Message")
+            let messageText = userMessage.text!
+            let um = Message(message: messageText, username: "yupeng", user_id: 1, message_type: "User Message")
             let jsonEncoder = JSONEncoder()
             let jsonData = try jsonEncoder.encode(um)
             let umjson = String(data: jsonData, encoding: String.Encoding.utf8)

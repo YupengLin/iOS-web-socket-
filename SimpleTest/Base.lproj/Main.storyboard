@@ -30,12 +30,22 @@
             <objects>
                 <viewController id="N3B-eU-fDA" customClass="ViewController" customModule="SimpleTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="AfF-mb-jqd"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZA3-Ac-gEF"/>
+                        <viewControllerLayoutGuide type="top" id="OGs-yb-nNE"/>
+                        <viewControllerLayoutGuide type="bottom" id="ix3-Hz-9jf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Sgl-3h-sU4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jfw-TS-cPN">
+                                <rect key="frame" x="93" y="534" width="202" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.85112442860000004" green="1" blue="0.91010840459999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Test" id="jdv-zM-Apy">
@@ -50,10 +60,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="userMessage" destination="Jfw-TS-cPN" id="7Pe-IR-wSq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrK-cf-cjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175" y="295"/>
+            <point key="canvasLocation" x="173.59999999999999" y="294.82758620689657"/>
         </scene>
     </scenes>
 </document>
