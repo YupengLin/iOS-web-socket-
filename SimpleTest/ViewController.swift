@@ -9,12 +9,7 @@
 import UIKit
 import Starscream
 
-struct Message : Codable {
-    var message : String
-    var username : String
-    var user_id : Int
-    var message_type : String
-}
+
 
 class ViewController: UIViewController, WebSocketDelegate {
     var socket: WebSocket!
@@ -47,8 +42,19 @@ class ViewController: UIViewController, WebSocketDelegate {
     }
     
     func websocketDidReceiveMessage(socket: WebSocketClient, text: String) {
-        print("receive data")
-        print("Received text: \(text)")
+//        print("receive text")
+
+        let jsonTextData: Data = text.data(using: .utf8)!
+
+
+        let decodedMessages = try? JSONDecoder().decode([Message].self, from: jsonTextData)
+        
+        for msg in decodedMessages! {
+            print("message: \(msg.message)")
+        }
+        
+        
+        
     }
     
     func websocketDidReceiveData(socket: WebSocketClient, data: Data) {
@@ -62,7 +68,7 @@ class ViewController: UIViewController, WebSocketDelegate {
         print("send message")
         do {
             let messageText = userMessage.text!
-            let um = Message(message: messageText, username: "yupeng", user_id: 1, message_type: "User Message")
+            let um = Message(message: messageText, username: "yupeng", user_id: 1, message_type: "user-message")
             let jsonEncoder = JSONEncoder()
             let jsonData = try jsonEncoder.encode(um)
             let umjson = String(data: jsonData, encoding: String.Encoding.utf8)
@@ -89,20 +95,4 @@ class ViewController: UIViewController, WebSocketDelegate {
     
 }
 
-func stringify(json: Any, prettyPrinted: Bool = false) -> String {
-    var options: JSONSerialization.WritingOptions = []
-    if prettyPrinted {
-        options = JSONSerialization.WritingOptions.prettyPrinted
-    }
-    
-    do {
-        let data = try JSONSerialization.data(withJSONObject: json, options: options)
-        if let string = String(data: data, encoding: String.Encoding.utf8) {
-            return string
-        }
-    } catch {
-        print(error)
-    }
-    
-    return ""
-}
+
