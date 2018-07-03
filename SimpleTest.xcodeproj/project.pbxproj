@@ -15,6 +15,8 @@
 		6B76EAA119DB0DAF00E49C70 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6B3E7A0E19D48D00006071F7 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CA368479541AFBDEE0DF1EA2 /* Pods_SimpleTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F00550C381338560058803 /* Pods_SimpleTest.framework */; };
 		F75E5F4C20DDADBF00F5FFEF /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E5F4B20DDADBF00F5FFEF /* model.swift */; };
+		F780128C20EC20290065803D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780128B20EC20290065803D /* StartViewController.swift */; };
+		F780128E20EC2B620065803D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780128D20EC2B620065803D /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		5C765AE7199A6DAA003D9110 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6B3E7A0819D48D00006071F7 /* Starscream.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Starscream.xcodeproj; path = ../../Starscream.xcodeproj; sourceTree = "<group>"; };
 		F75E5F4B20DDADBF00F5FFEF /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		F780128B20EC20290065803D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = Auth/StartViewController.swift; sourceTree = "<group>"; };
+		F780128D20EC2B620065803D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = Auth/LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +130,8 @@
 				5C765AE7199A6DAA003D9110 /* Images.xcassets */,
 				5C765ADE199A6DAA003D9110 /* Supporting Files */,
 				F75E5F4B20DDADBF00F5FFEF /* model.swift */,
+				F780128B20EC20290065803D /* StartViewController.swift */,
+				F780128D20EC2B620065803D /* LogInViewController.swift */,
 			);
 			path = SimpleTest;
 			sourceTree = "<group>";
@@ -284,8 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F780128C20EC20290065803D /* StartViewController.swift in Sources */,
 				5C765AE3199A6DAA003D9110 /* ViewController.swift in Sources */,
 				F75E5F4C20DDADBF00F5FFEF /* model.swift in Sources */,
+				F780128E20EC2B620065803D /* LogInViewController.swift in Sources */,
 				5C765AE1199A6DAA003D9110 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
