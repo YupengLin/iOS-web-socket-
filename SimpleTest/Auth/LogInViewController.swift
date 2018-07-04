@@ -30,11 +30,14 @@ class LogInViewController: UIViewController {
             "password": data!.base64EncodedString()
         ]
         
-        Alamofire.request(url, parameters: parameters).response { response in
+        Alamofire.request(url, parameters: parameters).responseString { response in
 
             if let serverResponse = response.response {
                 if serverResponse.statusCode == 200 {
-                    print("success")
+                    let jwtToken = response.result.value!
+                    let defaults = UserDefaults.standard
+                    defaults.set(jwtToken, forKey: "early.token")
+                    self.performSegue(withIdentifier: "LoginSuccess", sender: self)
                 } else {
                     print("failed")
                 }

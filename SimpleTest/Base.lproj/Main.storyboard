@@ -29,6 +29,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKz-E7-f1B">
+                                <rect key="frame" x="156" y="227" width="111" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -89,6 +96,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="aHQ-V6-ldO"/>
+                    <connections>
+                        <segue destination="N3B-eU-fDA" kind="show" identifier="LoginExist" id="ibE-RV-G8e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmE-N9-Bpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -148,11 +158,15 @@
                     <connections>
                         <outlet property="email" destination="DdF-RE-0wI" id="W8h-sJ-M78"/>
                         <outlet property="password" destination="ZRp-vF-92g" id="MHg-qQ-w6q"/>
+                        <segue destination="N3B-eU-fDA" kind="show" identifier="LoginSuccess" id="xRR-kA-C05"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfF-ln-Aef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="285"/>
+            <point key="canvasLocation" x="311" y="4"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ibE-RV-G8e"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -14,7 +14,24 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let jwtToken = UserDefaults.standard.string(forKey: "early.token") ?? ""
+        print("local jwt \(jwtToken)")
+        if jwtToken != "" {
+            self.performSegue(withIdentifier: "LoginExist", sender: self)
+        }
+
+        
+        
+        
+        
+    }
+    
     @IBAction func onLogin(_ sender: Any) {
         print("login")
         self.performSegue(withIdentifier: "LoginSelected", sender: self)
