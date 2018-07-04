@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LogInViewController: UIViewController {
 
@@ -15,8 +16,33 @@ class LogInViewController: UIViewController {
     
     
     @IBAction func onLoginConnection(_ sender: Any) {
-        print("hhh")
-        let 
+        
+        let emailText =  email.text!
+        let passwordTextCombo = emailText + password.text!
+        let data = passwordTextCombo.data(using: .utf8)
+        
+        
+        
+        let url = "http://localhost:8000/ap1/v1/auth/token"
+        
+        let parameters: Parameters = [
+            "email": emailText,
+            "password": data!.base64EncodedString()
+        ]
+        
+        Alamofire.request(url, parameters: parameters).response { response in
+
+            if let serverResponse = response.response {
+                if serverResponse.statusCode == 200 {
+                    print("success")
+                } else {
+                    print("failed")
+                }
+            }
+          
+        }
+        
+        
     }
     
     override func viewDidLoad() {
