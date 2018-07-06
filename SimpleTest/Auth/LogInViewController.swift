@@ -37,7 +37,7 @@ class LogInViewController: UIViewController {
                     let jwtToken = response.result.value!
                     let defaults = UserDefaults.standard
                     defaults.set(jwtToken, forKey: "early.token")
-                    self.performSegue(withIdentifier: "LoginSuccess", sender: self)
+                    self.present(ConversationViewController(), animated: true, completion: nil)
                 } else {
                     print("failed")
                 }

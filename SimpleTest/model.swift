@@ -8,10 +8,22 @@
 
 import Foundation
 
+//struct Message : Codable {
+//    var message : String
+//    var username : String
+//    var user_id : Int
+//    var message_type : String
+//}
+
 struct Message : Codable {
     var message : String
     var username : String
     var user_id : Int
     var message_type : String
+    var uuid : String
+    var created_at : String
 }
+
+
+
 

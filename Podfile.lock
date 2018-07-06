@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (4.7.2)
+  - MessageKit (1.0.0)
   - Starscream (3.0.5)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - MessageKit (~> 1.0)
   - Starscream (~> 3.0.2)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - MessageKit
     - Starscream
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  MessageKit: 16160036b16476b04bd0e9f2c7ce67e662e503e4
   Starscream: faf918b2f2eff7d5dd21180646bf015a669673bd
 
-PODFILE CHECKSUM: a786bfba1f1478b9f01e17c347fb7cf8e2a37c51
+PODFILE CHECKSUM: 0992d142bf9d62b1d7322962a9b49eea4c88c711
 
 COCOAPODS: 1.5.3

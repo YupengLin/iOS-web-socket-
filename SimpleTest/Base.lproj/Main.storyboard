@@ -9,56 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Test-->
-        <scene sceneID="d1c-mj-3av">
-            <objects>
-                <viewController id="N3B-eU-fDA" customClass="ViewController" customModule="SimpleTest" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OGs-yb-nNE"/>
-                        <viewControllerLayoutGuide type="bottom" id="ix3-Hz-9jf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Sgl-3h-sU4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jfw-TS-cPN">
-                                <rect key="frame" x="93" y="534" width="202" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.85112442860000004" green="1" blue="0.91010840459999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login Success" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKz-E7-f1B">
-                                <rect key="frame" x="156" y="227" width="111" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Test" id="jdv-zM-Apy">
-                        <barButtonItem key="leftBarButtonItem" title="Disconnect" id="ByR-Ln-P6Z">
-                            <connections>
-                                <action selector="disconnect:" destination="N3B-eU-fDA" id="k8L-AE-Ini"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Write Text" id="gjf-vP-Wu5">
-                            <connections>
-                                <action selector="writeText:" destination="N3B-eU-fDA" id="fyJ-Ys-gvh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="userMessage" destination="Jfw-TS-cPN" id="7Pe-IR-wSq"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zrK-cf-cjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2338.4000000000001" y="294.82758620689657"/>
-        </scene>
         <!--Start View Controller-->
         <scene sceneID="jin-Ui-edB">
             <objects>
@@ -96,9 +46,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="aHQ-V6-ldO"/>
-                    <connections>
-                        <segue destination="N3B-eU-fDA" kind="show" identifier="LoginExist" id="ibE-RV-G8e"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmE-N9-Bpx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,15 +105,11 @@
                     <connections>
                         <outlet property="email" destination="DdF-RE-0wI" id="W8h-sJ-M78"/>
                         <outlet property="password" destination="ZRp-vF-92g" id="MHg-qQ-w6q"/>
-                        <segue destination="N3B-eU-fDA" kind="show" identifier="LoginSuccess" id="xRR-kA-C05"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QfF-ln-Aef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311" y="4"/>
+            <point key="canvasLocation" x="418" y="295"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ibE-RV-G8e"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5C765AE1199A6DAA003D9110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C765AE0199A6DAA003D9110 /* AppDelegate.swift */; };
-		5C765AE3199A6DAA003D9110 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C765AE2199A6DAA003D9110 /* ViewController.swift */; };
 		5C765AE8199A6DAA003D9110 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C765AE7199A6DAA003D9110 /* Images.xcassets */; };
 		6B3E7A1119D48D17006071F7 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B3E7A0E19D48D00006071F7 /* Starscream.framework */; };
 		6B76EA9D19DB0BE600E49C70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C765AE4199A6DAA003D9110 /* Main.storyboard */; };
@@ -17,6 +16,11 @@
 		F75E5F4C20DDADBF00F5FFEF /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E5F4B20DDADBF00F5FFEF /* model.swift */; };
 		F780128C20EC20290065803D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780128B20EC20290065803D /* StartViewController.swift */; };
 		F780128E20EC2B620065803D /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780128D20EC2B620065803D /* LogInViewController.swift */; };
+		F780129520EEE68F0065803D /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780129420EEE68F0065803D /* ConversationViewController.swift */; };
+		F780129920EEEAFA0065803D /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780129820EEEAFA0065803D /* MockMessage.swift */; };
+		F780129E20EF4E610065803D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F780129D20EF4E610065803D /* Utils.swift */; };
+		F78012A120EF54840065803D /* Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78012A020EF54840065803D /* Variables.swift */; };
+		F7E0B82D20F0314700FBF0A5 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E0B82B20F0314700FBF0A5 /* SampleData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,13 +67,17 @@
 		5C765ADB199A6DAA003D9110 /* SimpleTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C765ADF199A6DAA003D9110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C765AE0199A6DAA003D9110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C765AE2199A6DAA003D9110 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C765AE5199A6DAA003D9110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C765AE7199A6DAA003D9110 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6B3E7A0819D48D00006071F7 /* Starscream.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Starscream.xcodeproj; path = ../../Starscream.xcodeproj; sourceTree = "<group>"; };
 		F75E5F4B20DDADBF00F5FFEF /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
 		F780128B20EC20290065803D /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartViewController.swift; path = Auth/StartViewController.swift; sourceTree = "<group>"; };
 		F780128D20EC2B620065803D /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = Auth/LogInViewController.swift; sourceTree = "<group>"; };
+		F780129420EEE68F0065803D /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConversationViewController.swift; path = Message/ConversationViewController.swift; sourceTree = "<group>"; };
+		F780129820EEEAFA0065803D /* MockMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockMessage.swift; path = Message/MockMessage.swift; sourceTree = "<group>"; };
+		F780129D20EF4E610065803D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Utils/Utils.swift; sourceTree = "<group>"; };
+		F78012A020EF54840065803D /* Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Variables.swift; path = Utils/Variables.swift; sourceTree = "<group>"; };
+		F7E0B82B20F0314700FBF0A5 /* SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleData.swift; path = Utils/SampleData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,12 +132,16 @@
 		5C765ADD199A6DAA003D9110 /* SimpleTest */ = {
 			isa = PBXGroup;
 			children = (
+				F7E0B82B20F0314700FBF0A5 /* SampleData.swift */,
 				5C765AE0199A6DAA003D9110 /* AppDelegate.swift */,
-				5C765AE2199A6DAA003D9110 /* ViewController.swift */,
 				5C765AE4199A6DAA003D9110 /* Main.storyboard */,
 				5C765AE7199A6DAA003D9110 /* Images.xcassets */,
 				5C765ADE199A6DAA003D9110 /* Supporting Files */,
 				F75E5F4B20DDADBF00F5FFEF /* model.swift */,
+				F780129D20EF4E610065803D /* Utils.swift */,
+				F78012A020EF54840065803D /* Variables.swift */,
+				F780129420EEE68F0065803D /* ConversationViewController.swift */,
+				F780129820EEEAFA0065803D /* MockMessage.swift */,
 				F780128B20EC20290065803D /* StartViewController.swift */,
 				F780128D20EC2B620065803D /* LogInViewController.swift */,
 			);
@@ -274,11 +286,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleTest/Pods-SimpleTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,11 +307,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F780129920EEEAFA0065803D /* MockMessage.swift in Sources */,
 				F780128C20EC20290065803D /* StartViewController.swift in Sources */,
-				5C765AE3199A6DAA003D9110 /* ViewController.swift in Sources */,
+				F78012A120EF54840065803D /* Variables.swift in Sources */,
 				F75E5F4C20DDADBF00F5FFEF /* model.swift in Sources */,
 				F780128E20EC2B620065803D /* LogInViewController.swift in Sources */,
 				5C765AE1199A6DAA003D9110 /* AppDelegate.swift in Sources */,
+				F780129520EEE68F0065803D /* ConversationViewController.swift in Sources */,
+				F7E0B82D20F0314700FBF0A5 /* SampleData.swift in Sources */,
+				F780129E20EF4E610065803D /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

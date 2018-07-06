@@ -21,13 +21,11 @@ class StartViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let jwtToken = UserDefaults.standard.string(forKey: "early.token") ?? ""
-        print("local jwt \(jwtToken)")
         if jwtToken != "" {
-            self.performSegue(withIdentifier: "LoginExist", sender: self)
+
+        self.present(ConversationViewController(), animated: true, completion: nil)
         }
 
-        
-        
         
         
     }
