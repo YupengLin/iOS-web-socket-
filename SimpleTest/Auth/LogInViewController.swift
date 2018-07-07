@@ -23,7 +23,7 @@ class LogInViewController: UIViewController {
         
         
         
-        let url = "http://localhost:8000/ap1/v1/auth/token"
+        let url = Constants.BASEURL + "/ap1/v1/auth/token"
         
         let parameters: Parameters = [
             "email": emailText,
@@ -37,7 +37,19 @@ class LogInViewController: UIViewController {
                     let jwtToken = response.result.value!
                     let defaults = UserDefaults.standard
                     defaults.set(jwtToken, forKey: "early.token")
-                    self.present(ConversationViewController(), animated: true, completion: nil)
+                    
+                    
+                    let url = Constants.BASEURL + "/api/v1/auth/user"
+                    let Auth_header    = [ "Authorization" : ShareData.shared.getAuthToken(jwt: jwtToken),  "Content-Type" : "application/json"]
+                    Alamofire.request(url, headers: Auth_header).responseString { response in
+                        if let text = response.result.value {
+                            let jsonTextData: Data = text.data(using: .utf8)!
+                            if let decodedUser = try? JSONDecoder().decode(User.self, from: jsonTextData) {
+                                ShareData.shared.setCurrentUser(u: decodedUser)
+                                self.present(ConversationViewController(), animated: true, completion: nil)
+                            }
+                        }
+                    }
                 } else {
                     print("failed")
                 }

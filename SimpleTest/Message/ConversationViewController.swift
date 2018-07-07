@@ -116,7 +116,7 @@ internal class ConversationViewController: MessagesViewController {
 extension ConversationViewController: MessagesDataSource {
     
     func currentSender() -> Sender {
-        return Utils.shared.currentSender
+        return ShareData.shared.getCurrentSender()
     }
     
     func numberOfSections(in messagesCollectionView: MessagesCollectionView) -> Int {
@@ -175,7 +175,7 @@ extension ConversationViewController: WebSocketDelegate{
         let decodedMessages = try? JSONDecoder().decode(Message.self, from: jsonTextData)
         let msg = decodedMessages!
         
-        if msg.user_id != Utils.shared.getCurrentSenderId() {
+        if msg.user_id != ShareData.shared.getCurrentSenderId() {
             print("Begin to render")
             print(msg.message)
             let message = MockMessage(text: msg.message, sender:Sender(id: String(msg.user_id), displayName: msg.username), messageId: msg.uuid, date: Utils.shared.convertStringToDate(timestamp: msg.created_at))

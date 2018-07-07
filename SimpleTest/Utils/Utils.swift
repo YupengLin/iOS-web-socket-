@@ -25,13 +25,13 @@ final internal class Utils {
     private init() {}
     
     
-    var currentSender: Sender {
-        return Sender(id: String(2), displayName: "yupeng")
-    }
+//    var currentSender: Sender {
+//        return Sender(id: String(2), displayName: "yupeng")
+//    }
     
-    func getCurrentSenderId() -> Int {
-        return 2
-    }
+//    func getCurrentSenderId() -> Int {
+//        return 2
+//    }
     
     
     func getMessagesFromServer(count: Int, completion: @escaping ([MockMessage]) -> Void) {
@@ -70,6 +70,8 @@ final internal class Utils {
         let date = RFC3339DateFormatter.date(from: timestamp)
         return date!
     }
+    
+    
     
     
     

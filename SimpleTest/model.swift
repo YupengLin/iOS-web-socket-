@@ -25,5 +25,10 @@ struct Message : Codable {
 }
 
 
+struct User : Codable {
+    var user_id : Int
+    var username : String
+}
+
 
 
